@@ -1,6 +1,8 @@
 
 # Creating Custom User Model for Authentication
 
+[![Generic badge](https://img.shields.io/badge/CODE-WORKED-GREEN.svg)](https://shields.io/)
+
 ## What is a Custom User Model Extending AbstractBaseUser?
 It is an entirely new User model that inherit from AbstractBaseUser. It requires a special care and to update some references through the settings.py. Ideally it should be done in the begining of the project, since it will dramatically impact the database schema. Extra care while implementing it.
 

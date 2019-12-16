@@ -1,5 +1,7 @@
 # Extending User Model with One-To-One Link
 
+[![Generic badge](https://img.shields.io/badge/CODE-WORKED-GREEN.svg)](https://shields.io/)
+
 ## What is a One-To-One Link?
 
 It is a regular Django model that’s gonna have it’s own database table and will hold a One-To-One relationship with the existing User Model through a OneToOneField.

@@ -1,5 +1,7 @@
 # Extending Existing User Model with a Proxy.
 
+[![Generic badge](https://img.shields.io/badge/CODE-WORKED-GREEN.svg)](https://shields.io/)
+
 ## Using a Proxy Model
 
 ### What is a Proxy Model ?
