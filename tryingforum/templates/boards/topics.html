@@ -1,0 +1,15 @@
+{% extends 'boards/base.html' %}
+
+{% block title %}
+  {{ br.name }}
+{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active" aria-current="page">Discussion Boards</li>
+  <li class="breadcrumb-item active">{{ br.name }}</li>
+{% endblock %}
+
+
+{% block content %}
+{{ br.description }}
+{% endblock %}
