@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block breadcrumb %}
-  <li class="breadcrumb-item active" aria-current="page">Discussion Boards</li>
+  <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'home' %}">Discussion Boards</a></li>
   <li class="breadcrumb-item active">{{ br.name }}</li>
 {% endblock %}
 

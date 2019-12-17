@@ -23,8 +23,7 @@
     {% for br in brs %}
     <tr>
       <td>
-        {{ br.name }}
-        <br>
+        <a href="{% url 'board_topics' br.pk %}">{{ br.name }}</a><br>
         <small style="color: #888">{{ br.description }}</small>
       </td>
       <td>0</td>
