@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 def trigger_error(request):
-	division_by_zer = 1/0
+	division_by_zer = 1/0*12
 
 urlpatterns = [
     path('admin/', admin.site.urls),
