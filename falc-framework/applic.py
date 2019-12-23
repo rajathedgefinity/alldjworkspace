@@ -6,6 +6,7 @@ class Authorize(object):
         print(self._roles)
 
     def __call__(self, req, resp, resource, param):
+        # DB User Get a Role.
         if 'Admin' in self._roles:
             req.user_id = 5
         else:
