@@ -38,13 +38,24 @@ class onsomecall:
 
     def on_post(self, req, resp):
         resp.status = falcon.HTTP_200
-        data = json.loads(req.stream.read())
-
-        sum = int(data['x']) + int(data['y'])
+        validated = self.__validate_json_input(req)
 
         output = {
-            'msg': 'x : {x} + y: {y} = {e}'.format(x = data['x'],y = data['y'],e = sum)
+            'status':200,
+            'msg':None
         }
+
+        if validated:
+            if 'x' in self.__json_content and 'y' in self.__json_content:
+                sum = int(self.__json_content['x']) + int(self.__json_content['y'])
+                output['msg'] = 'x : {x} + y: {y} = {e}'.format(x = self.__json_content['x'],y = self.__json_content['y'],e = sum)
+            else:
+                output['status'] = 404
+                output['msg'] = "json input needs x and y params"
+
+        else:
+            output['status'] = 404
+            output['msg'] = 'json input is not validated'
         resp.body = json.dumps(output)
 
     def on_put(self, req, resp):
