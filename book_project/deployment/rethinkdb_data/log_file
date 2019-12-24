@@ -1,0 +1,18 @@
+2019-12-24T12:47:44.989308802 0.019759s notice: Recursively removing directory /home/rajath/alldjworkspace/book_project/deployment/rethinkdb_data/tmp
+2019-12-24T12:47:44.998112486 0.028565s notice: Initializing directory /home/rajath/alldjworkspace/book_project/deployment/rethinkdb_data
+2019-12-24T12:47:44.998194242 0.028644s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/rajath/alldjworkspace/book_project/deployment/rethinkdb_data' did not already exist or is empty.)
+2019-12-24T12:47:44.998224815 0.028674s notice: Running rethinkdb 2.4.0~0bionic (CLANG 6.0.0 (tags/RELEASE_600/final))...
+2019-12-24T12:47:45.000138113 0.030589s notice: Running on Linux 4.15.0-72-generic x86_64
+2019-12-24T12:47:45.000182473 0.030632s notice: Loading data from directory /home/rajath/alldjworkspace/book_project/deployment/rethinkdb_data
+2019-12-24T12:47:45.064656634 0.095109s info: Automatically using cache size of 5111 MB
+2019-12-24T12:47:45.065307555 0.095757s notice: Listening for intracluster connections on port 29015
+2019-12-24T12:47:45.066076867 0.096527s notice: Listening for client driver connections on port 28015
+2019-12-24T12:47:45.066163988 0.096614s notice: Listening for administrative HTTP connections on port 8080
+2019-12-24T12:47:45.066168661 0.096618s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2019-12-24T12:47:45.066172163 0.096622s notice: Listening on driver addresses: 127.0.0.1, ::1
+2019-12-24T12:47:45.066178913 0.096628s notice: Listening on http addresses: 127.0.0.1, ::1
+2019-12-24T12:47:45.066183447 0.096633s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2019-12-24T12:47:45.066188079 0.096638s notice: Server ready, "edgefinity_mem" b5c8234f-004e-4fe4-82b2-0d9b5f34c19d
+2019-12-24T13:04:24.212765631 999.243216s info: Table ea4bcaa2-034c-40c3-bf33-ed34412b6785: Starting a new Raft election for term 1.
+2019-12-24T13:04:24.213022104 999.243472s info: Table ea4bcaa2-034c-40c3-bf33-ed34412b6785: Added replica on this server.
+2019-12-24T13:04:24.222652510 999.253102s info: Table ea4bcaa2-034c-40c3-bf33-ed34412b6785: This server is Raft leader for term 1. Latest log index is 0.
