@@ -16,3 +16,8 @@
 2019-12-24T13:04:24.212765631 999.243216s info: Table ea4bcaa2-034c-40c3-bf33-ed34412b6785: Starting a new Raft election for term 1.
 2019-12-24T13:04:24.213022104 999.243472s info: Table ea4bcaa2-034c-40c3-bf33-ed34412b6785: Added replica on this server.
 2019-12-24T13:04:24.222652510 999.253102s info: Table ea4bcaa2-034c-40c3-bf33-ed34412b6785: This server is Raft leader for term 1. Latest log index is 0.
+2019-12-24T18:53:32.112388287 11717.993427s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2019-12-24T18:53:32.112746043 11717.993785s notice: Shutting down client connections...
+2019-12-24T18:53:32.112901229 11717.993940s notice: All client connections closed.
+2019-12-24T18:53:32.112910726 11717.993949s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2019-12-24T18:53:32.117293651 11717.998333s notice: Storage engine shut down.
