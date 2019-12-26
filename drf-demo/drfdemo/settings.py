@@ -61,6 +61,14 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema',
 }
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'basic': {
+            'type': 'basic'
+        }
+    },
+}
+
 ROOT_URLCONF = 'drfdemo.urls'
 
 TEMPLATES = [

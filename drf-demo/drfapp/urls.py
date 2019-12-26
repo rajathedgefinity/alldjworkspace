@@ -11,7 +11,7 @@ router.register(r'students', StudentViewSet)
 router.register(r'universities', UniversityViewSet)
 
 urlpatterns = [
-    path('docs/', schema_view, name="docs"),
+    path('api/v1/docs/', schema_view, name="docs"),
 ]
 
 urlpatterns += router.urls
