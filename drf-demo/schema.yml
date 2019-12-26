@@ -1,0 +1,399 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /students/:
+    get:
+      operationId: listStudents
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                      readOnly: true
+                    first_name:
+                      type: string
+                      maxLength: 50
+                    last_name:
+                      type: string
+                      maxLength: 50
+                    university:
+                      type: integer
+                  required:
+                  - first_name
+                  - last_name
+                  - university
+          description: ''
+    post:
+      operationId: createStudent
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: &id001
+              properties:
+                first_name:
+                  type: string
+                  maxLength: 50
+                last_name:
+                  type: string
+                  maxLength: 50
+                university:
+                  type: integer
+              required:
+              - first_name
+              - last_name
+              - university
+          application/x-www-form-urlencoded:
+            schema: *id001
+          multipart/form-data:
+            schema: *id001
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  first_name:
+                    type: string
+                    maxLength: 50
+                  last_name:
+                    type: string
+                    maxLength: 50
+                  university:
+                    type: integer
+                required:
+                - first_name
+                - last_name
+                - university
+          description: ''
+  /students/{id}/:
+    get:
+      operationId: retrieveStudent
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Student.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  first_name:
+                    type: string
+                    maxLength: 50
+                  last_name:
+                    type: string
+                    maxLength: 50
+                  university:
+                    type: integer
+                required:
+                - first_name
+                - last_name
+                - university
+          description: ''
+    put:
+      operationId: updateStudent
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Student.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: &id002
+              properties:
+                first_name:
+                  type: string
+                  maxLength: 50
+                last_name:
+                  type: string
+                  maxLength: 50
+                university:
+                  type: integer
+              required:
+              - first_name
+              - last_name
+              - university
+          application/x-www-form-urlencoded:
+            schema: *id002
+          multipart/form-data:
+            schema: *id002
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  first_name:
+                    type: string
+                    maxLength: 50
+                  last_name:
+                    type: string
+                    maxLength: 50
+                  university:
+                    type: integer
+                required:
+                - first_name
+                - last_name
+                - university
+          description: ''
+    patch:
+      operationId: partial_updateStudent
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Student.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: &id003
+              properties:
+                first_name:
+                  type: string
+                  maxLength: 50
+                last_name:
+                  type: string
+                  maxLength: 50
+                university:
+                  type: integer
+          application/x-www-form-urlencoded:
+            schema: *id003
+          multipart/form-data:
+            schema: *id003
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  first_name:
+                    type: string
+                    maxLength: 50
+                  last_name:
+                    type: string
+                    maxLength: 50
+                  university:
+                    type: integer
+                required:
+                - first_name
+                - last_name
+                - university
+          description: ''
+    delete:
+      operationId: destroyStudent
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Student.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+  /universities/:
+    get:
+      operationId: listUniversitys
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                      readOnly: true
+                    name:
+                      type: string
+                      maxLength: 50
+                  required:
+                  - name
+          description: ''
+    post:
+      operationId: createUniversity
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: &id004
+              properties:
+                name:
+                  type: string
+                  maxLength: 50
+              required:
+              - name
+          application/x-www-form-urlencoded:
+            schema: *id004
+          multipart/form-data:
+            schema: *id004
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  name:
+                    type: string
+                    maxLength: 50
+                required:
+                - name
+          description: ''
+  /universities/{id}/:
+    get:
+      operationId: retrieveUniversity
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this University.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  name:
+                    type: string
+                    maxLength: 50
+                required:
+                - name
+          description: ''
+    put:
+      operationId: updateUniversity
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this University.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: &id005
+              properties:
+                name:
+                  type: string
+                  maxLength: 50
+              required:
+              - name
+          application/x-www-form-urlencoded:
+            schema: *id005
+          multipart/form-data:
+            schema: *id005
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  name:
+                    type: string
+                    maxLength: 50
+                required:
+                - name
+          description: ''
+    patch:
+      operationId: partial_updateUniversity
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this University.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema: &id006
+              properties:
+                name:
+                  type: string
+                  maxLength: 50
+          application/x-www-form-urlencoded:
+            schema: *id006
+          multipart/form-data:
+            schema: *id006
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  name:
+                    type: string
+                    maxLength: 50
+                required:
+                - name
+          description: ''
+    delete:
+      operationId: destroyUniversity
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this University.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
