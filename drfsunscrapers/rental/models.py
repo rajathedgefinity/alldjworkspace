@@ -20,4 +20,4 @@ class Borrowed(models.Model):
     returned = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return '{}{}{}{}'.format(self.what,self.to_who,self.when,self.returned)
+        return '{} {} {} {}'.format(self.what,self.to_who,self.when,self.returned)

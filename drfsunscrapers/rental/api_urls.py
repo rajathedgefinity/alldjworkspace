@@ -3,4 +3,5 @@ from .api_routers import router
 
 urlpatterns = [
     path('v1/',include(router.urls)),
+    path('auth/',include('djoser.urls.authtoken')),
 ]
