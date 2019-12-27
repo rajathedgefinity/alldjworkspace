@@ -7,7 +7,7 @@ class smarthome(Document):
     name = StringField()
     presentstate = StringField()
     onoffstate = StringField()
-    timestampnow = StringField()
+    timestampnow = DateTimeField()
 
 # smh = smarthome(name="63_fueb1_Switch_L2",presentstate="OFF",onoffstate="OFF",timestampnow="Dec 27,2019  12:22:25")
 # smh.tags = ["mongodb", "mongoengine"]

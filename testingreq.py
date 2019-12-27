@@ -1,16 +1,30 @@
 # Posting with Basic Authentication i.e using UserName and Password
 
-import requests
+import requests, json
 
-API_ENDPOINT = "https://devtest.fueblabs.com/rest/persistence/items"
+API_STARTPOINT = "https://devtest.fueblabs.com/rest/persistence/items"
+API_ENDPOINT = "http://127.0.0.1:8000/adddata"
 
 session = requests.Session()
 session.auth = ('rajathtest@gmail.com','fueb1')
-r = session.get(url=API_ENDPOINT)
+r = session.get(url=API_STARTPOINT)
 # k= r.text
 k = r.json()
+# print(k)
+data = {}
 for i in k:
-    print(i)
+    # print(i)
+    data['name'] = i['name']
+    data['presentstate'] = i['state']
+    data['onoffstate'] = i['OnOffState']
+    data['timestampnow'] = i['timestampNew']
+    dataey = json.dumps(data)
+    p = requests.post(url=API_ENDPOINT, data=dataey)
+    l = p.text
+    print(l)
+    data = {}
+# print(data)
+
 
 # Posting with 2nd Method of Basic Authentication using Username and password_validation
 
