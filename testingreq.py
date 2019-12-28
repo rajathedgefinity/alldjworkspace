@@ -15,8 +15,8 @@ data = {}
 for i in k:
     # print(i)
     data['name'] = i['name']
-    data['presentstate'] = i['state']
-    data['onoffstate'] = i['OnOffState']
+    data['presentstate'] = True if i['state'] == 'ON' else False
+    data['onoffstate'] = True if i['OnOffState'] == 'ON' else False
     data['timestampnow'] = i['timestampNew']
     dataey = json.dumps(data)
     p = requests.post(url=API_ENDPOINT, data=dataey)

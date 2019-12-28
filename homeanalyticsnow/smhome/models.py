@@ -5,8 +5,8 @@ from mongoengine import StringField, BooleanField, DateTimeField, Document
 
 class smarthome(Document):
     name = StringField()
-    presentstate = StringField()
-    onoffstate = StringField()
+    presentstate = BooleanField()
+    onoffstate = BooleanField()
     timestampnow = DateTimeField()
 
 # smh = smarthome(name="63_fueb1_Switch_L2",presentstate="OFF",onoffstate="OFF",timestampnow="Dec 27,2019  12:22:25")
