@@ -1,11 +1,13 @@
 from mongoengine import connect
-from mongoengine import StringField, BooleanField, DateTimeField, Document
+from mongoengine import StringField, IntField, BooleanField, DateTimeField, Document
 
 # connect('analytics', host='127.0.0.1', port=27017, username='root', password='pass', authentication_source='admin')
 
 class smarthome(Document):
-    name = StringField()
+    name = StringField(primary_key=True)
     presentstate = BooleanField()
+    dimmervalue = IntField()
+    dimmer = BooleanField()
     onoffstate = BooleanField()
     timestampnow = DateTimeField()
 

@@ -26,18 +26,22 @@ class AnalyticsResource:
             'msg': None,
             'name':None,
             'presentstate': None,
+            'dimmervalue': None,
+            'dimmer': None,
             'onoffstate': None,
             'timeanddate': None,
         }
 
         if validated:
-            if 'smarthome_id' in self.__json_content:
-                smarthome_obj = smarthome.objects.get(id=self.__json_content["smarthome_id"])
+            if 'smarthome_name' in self.__json_content:
+                smarthome_obj = smarthome.objects.get(name=self.__json_content["smarthome_name"])
                 content['msg'] = "Success"
                 content['name'] = smarthome_obj.name
                 content['presentstate'] = smarthome_obj.presentstate
+                content['dimmervalue'] = smarthome_obj.dimmervalue
+                content['dimmer'] = smarthome_obj.dimmer
                 content['onoffstate'] = smarthome_obj.onoffstate
-                content['timeanddate'] = smarthome_obj.timestampnow
+                content['timeanddate'] = str(smarthome_obj.timestampnow)
             else:
                 content['status'] = 404
                 content['msg'] = "Do not find id in the request"
@@ -56,7 +60,7 @@ class AnalyticsResource:
         }
 
         if validated:
-            if 'name' in self.__json_content and 'presentstate' in self.__json_content and 'onoffstate' in self.__json_content and 'timestampnow' in self.__json_content:
+            if 'name' in self.__json_content and 'presentstate' in self.__json_content and 'dimmervalue' in self.__json_content and 'dimmer' in self.__json_content and 'onoffstate' in self.__json_content and 'timestampnow' in self.__json_content:
                 smarthome_obj = smarthome.objects.create(**self.__json_content)
                 content['id'] = str(smarthome_obj.id)
                 content['msg'] = 'Switch State Successfully added to Analytics Database'
