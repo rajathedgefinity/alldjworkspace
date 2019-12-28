@@ -61,8 +61,9 @@ class AnalyticsResource:
 
         if validated:
             if 'name' in self.__json_content and 'presentstate' in self.__json_content and 'dimmervalue' in self.__json_content and 'dimmer' in self.__json_content and 'onoffstate' in self.__json_content and 'timestampnow' in self.__json_content:
-                smarthome_obj = smarthome.objects.create(**self.__json_content)
-                content['id'] = str(smarthome_obj.id)
+                smarthome_obj = smarthome.objects(name=self.__json_content['name']).update(**self.__json_content, upsert=True)
+                # print(smarthome_obj.presentstate)
+                # content['name'] = str(smarthome_obj.name)
                 content['msg'] = 'Switch State Successfully added to Analytics Database'
             else:
                 content['id'] = None
