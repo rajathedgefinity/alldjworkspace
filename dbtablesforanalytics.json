@@ -1,0 +1,56 @@
+{
+  "Hub ID":1,
+  "info":
+  {
+    "Geolocation":
+    {
+      "latitude":13.07012,
+      "longitude":14.0987
+      }
+    }
+}
+
+{
+  "Hub ID":1,
+  "info":
+  {
+    "Time Stamp":"2019-12-31T18:02:10,039",
+    "Switch Name":"63_fueb1_Switch_L1",
+    "Initial Value":0,
+    "Final Value":1
+  }
+  {
+    "Time Stamp":"2019-01-01T16:13:19,010",
+    "Switch Name":"dimmer",
+    "Initial Value":37,
+    "Final Value":89
+  }
+  {
+    "Time Stamp":"2019-12-31T18:07:20,039",
+    "Switch Name":"63_fueb1_Switch_L1",
+    "Initial Value":0,
+    "Final Value":1
+  }
+}
+
+{
+  "Hub ID":1,
+  "info":
+  {
+    "Switch Name":"63_fueb1_Switch_L1",
+    "dates":{
+      "31-12-2019":2,
+      "01-01-2020":0,
+      "02-01-2020":0,
+      "03-01-2020":0
+    }
+    {
+      "Switch Name":"dimmer",
+      "dates":{
+        "31-12-2019":0,
+        "01-01-2020":1,
+        "02-01-2020":0,
+        "03-01-2020":0
+      }
+  }
+}
