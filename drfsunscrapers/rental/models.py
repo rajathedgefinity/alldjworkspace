@@ -1,8 +1,19 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
 class OwnedModel(models.Model):
+    """Owned model
+
+       This Module is all about what you own.
+
+       Args:
+            No (str): Nothing gonna Accept
+
+        Returns:
+            Creates simple table known as OwnedModel in the DB
+    """
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     class Meta:
