@@ -42,9 +42,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'djoser',
     'rest_framework.authtoken',
-    'sphinxdoc',
-    'haystack',
+    'docs',
 ]
+
+DOCS_ROOT = os.path.join(BASE_DIR, '_build/html')
+DOCS_ACCESS = 'public'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':[
