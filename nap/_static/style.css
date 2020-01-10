@@ -1,3 +1,11 @@
 .wy-nav-content {
     max-width: none;
 }
+
+div.admonition-todo {
+border-top: 0.5px solid red;
+border-bottom: 0.5px solid red;
+border-left: 0.5px solid red;
+border-right: 0.5px solid red;
+background-color: #ff6347
+}
