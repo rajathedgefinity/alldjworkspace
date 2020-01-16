@@ -36,7 +36,7 @@ COOKIE_OPTS = {"name":"my_auth_token",
                 "path": "/things",
                 "http_only": True}
 
-login, auth_middleware = falcon_jwt.get_auth_objects(
+login, auth_middleware = falcon_jwt.get_authobjects(
     USERS.get, "randomsecret", 3600, token_opts=COOKIE_OPTS
 )
 
