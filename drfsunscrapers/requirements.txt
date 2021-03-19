@@ -53,7 +53,7 @@ django-sphinx-autodoc==0.2
 django-sphinxdoc==2.0.0
 django-templated-mail==1.1.1
 django-webpush==0.3.1
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djongo==1.2.38
 djoser==2.0.3
 docutils==0.15.2
