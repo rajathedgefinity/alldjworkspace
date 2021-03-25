@@ -147,7 +147,7 @@ python-firebase==1.2
 python-logstash==0.4.6
 pytz==2017.3
 pywebpush==1.9.4
-PyYAML==5.2
+PyYAML==5.4
 pyyml==0.0.2
 pyzmq==18.1.1
 qtconsole==4.6.0
